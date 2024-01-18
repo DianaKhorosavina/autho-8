@@ -15,9 +15,9 @@ public class LoginPage {
         errorNotification.shouldHave(Condition.exactText(expectedText)).shouldBe(Condition.visible);
     }
 
-    public VerificationPage validLogin(DataHelper.AuthInfo authInfo){
-        loginField.setValue(authInfo.getLogin());
-        passwordField.setValue(authInfo.getPassword());
+    public VerificationPage validLogin(DataHelper.AuthInfo info){
+        loginField.setValue(info.getLogin());
+        passwordField.setValue(info.getPassword());
         loginButton.click();
         return new VerificationPage();
     }
